@@ -31,7 +31,7 @@ URL-REGEX,^http:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
 
 [Header Rewrite]
 # > 小小影视vip (By Eric)
-https:\/\/.*.xiaoxiao(img|apps|appxs).com header-replace Cookie xxx_api_auth=6631616134633837383533316262643363616532333362333138373130336362
+https:\/\/.*\.(xxjjappss|xjxjappss)\.com url request-header (\r\n)Cookie:.+(\r\n) request-header $1Cookie: xxx_api_auth=3033623035303663306635353331323030396330653339633661343930336666$2
 
 [Script]
 # > BoxJs
