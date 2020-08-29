@@ -29,11 +29,6 @@ URL-REGEX,^http:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
 ^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/general\/search\/single\/ https://aweme.snssdk.com/aweme/v1/general/search/single/ header
 ^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/hot/search\/video\/list\/ https://aweme.snssdk.com/aweme/v1/hot/search/video/list/ header
 
-[Header Rewrite]
-# > 小小影视vip (By Eric)
-https:\/\/.*\..*\.com\/(vod\/reqplay\/|ucp/index|getGlobalData) url script-response-body https://raw.githubusercontent.com/JungegeCN/JGG/master/xxys.js.js
-https:\/\/.*\.(xxjjappss|xjxjappss)\.com url request-header (\r\n)Cookie:.+(\r\n) request-header $1Cookie: xxx_api_auth=3033623035303663306635353331323030396330653339633661343930336666$2
-
 [Script]
 # > BoxJs
 Rewrite: BoxJs = type=http-request,pattern=^https://8.8.8.8(/api|/home|/sub|/my|/app|/log|/revert)?($|\/),script-path=https://gitee.com/chavyleung/scripts/raw/master/chavy.box.js,requires-body=true,max-size=0,timeout=120
