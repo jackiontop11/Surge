@@ -30,8 +30,6 @@ URL-REGEX,^http:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/,REJECT-TINYGIF
 ^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/hot/search\/video\/list\/ https://aweme.snssdk.com/aweme/v1/hot/search/video/list/ header
 
 [Header Rewrite]
-# > 小小影视vip (By Eric)
-https:\/\/.*.xiaoxiao(img|apps|appxs).com header-replace Cookie xxx_api_auth=6131333537653261363463323331666265663763396239663835636662373930
 
 [Script]
 # > yichahucha
@@ -81,8 +79,6 @@ dqsj.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/S
 ydybj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Alex0510/Eric/master/surge/Script/ydybj.js,type=http-response,pattern=https://note.youdao.com/yws/(mapi/payment|api/self)
 # > 彩云小译 (By Alex0510)
 cyxy.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/cyxy.js,type=http-response,pattern=^https:\/\/api\.interpreter\.caiyunai\.com\/v1\/user
-# > 石墨文档 (By Alex0510)
-shimo.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/shimo.js,type=http-response,pattern=https://api.shimo.im/users/
 # 手机硬件管家 (By Alex0510)
 sjyjgj.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/sjyjgj.js,type=http-response,pattern=http:\/\/api\.591master\.com\:8081\/(1.0|3.6.8)\/ui(forum|common)\/(downloadwallpaper|getuser)
 # 蜗牛睡眠会员（by 黑黑酱）
