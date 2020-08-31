@@ -2,7 +2,6 @@
 #!desc=Cookie获取
 #!system=ios
 
-
 [Script]
 # > 京东
 # 浏览器登录 https://bean.m.jd.com 点击签到并且出现签到日历
