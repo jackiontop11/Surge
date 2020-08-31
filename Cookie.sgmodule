@@ -1,0 +1,10 @@
+#!name=机场签到Cookie版
+#!desc=Cookue
+#!system=ios
+
+[Script]
+获取Cookie = type=http-request, pattern=https://ikuuu.co, script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkincookie_env.js
+（其中https:\/\/cccat\.io需要替换为你自己的机场链接）
+
+[MITM]
+hostname =  ikuuu.co
