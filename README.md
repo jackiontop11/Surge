@@ -5,11 +5,11 @@
 
 ### Loon脚本订阅配置：
 
-* [Script](https://raw.githubusercontent.com/1653379593/surge/master/Script) 脚本订阅
+* [Script](https://raw.githubusercontent.com/1653379593/Surge/master/Script) 脚本订阅
 
-* [Cookie](https://raw.githubusercontent.com/1653379593/surge/master/Cookie)获取Cookie订阅
+* [Cookie](https://raw.githubusercontent.com/1653379593/Surge/master/Cookie)获取Cookie订阅
 
-* [Task](https://raw.githubusercontent.com/1653379593/surge/master/Task) 定时任务订阅
+* [Task](https://raw.githubusercontent.com/1653379593/Surge/master/Task) 定时任务订阅
 
 
 ## 免责声明：
