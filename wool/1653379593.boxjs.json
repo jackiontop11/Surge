@@ -1,8 +1,25 @@
 {
-  "id": "sunert.app.sub",
-  "name": "Sunert 签到应用订阅",
+  "id": "1653379593",
+  "name": "1653379593 签到应用订阅",
   "author": "@Sunert",
-  "icon": "https://avatars2.githubusercontent.com/u/47924389?s=460&u=5152f048a9e8aaa45102763a578172407c40fcc8&v=4",
-  "repo": "https://gitee.com/Sunert/Scripts/tree/master",
+  "icon": "https://raw.githubusercontent.com/1653379593/The-picture/master/Agenhc.jpg",
+  "repo": "https://github.com/1653379593/Surge",
   "apps": [
     {
+      "id": "txnews",
+      "name": "腾讯新闻",
+      "keys": ["sy_signurl_txnews", "sy_cookie_txnews","video_txnews"],
+      "author": "@sunert",
+      "settings": [
+        {
+          "id": "notifynum",
+          "name": "通知频率",
+          "val": 4,
+          "type": "number",
+          "desc": "视频红包间隔通知开为1，常关为0(默认4次)"
+        },
+        {
+          "id": "logsturn",
+          "name": "调试日志",
+          "val": false,
+          "type": "boolean"
