@@ -1,9 +1,9 @@
 {
-  "id": "yihetang.app.sub",
-  "name": "yihetang 脚本订阅",
-  "author": "yihetang",
-  "icon": "https://avatars0.githubusercontent.com/u/9592236",
-  "repo": "https://github.com/1653379593/Surge",
+  "id": "chavy.app.sub",
+  "name": "Chavy 签到应用订阅",
+  "author": "@chavyleung",
+  "icon": "https://avatars3.githubusercontent.com/u/29748519?s=460&u=392a19e85465abbcb1791c9b8b32184a16e6795e&v=4",
+  "repo": "https://github.com/chavyleung/scripts",
   "apps": [
     {
       "id": "txnews",
@@ -27,7 +27,7 @@
       ],
        "repo": "https://gitee.com/Sunert/Scripts/blob/master/Task/txnews.js",
        "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/txnews.png", "https://raw.githubusercontent.com/Orz-3/task/master/txnews.png"],
-       "script": "https://gitee.com/Sunert/Scripts/raw/master/Task/txnews.js
+       "script": "https://gitee.com/Sunert/Scripts/raw/master/Task/txnews.js"
     }
   ]
 }
