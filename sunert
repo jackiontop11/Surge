@@ -56,7 +56,7 @@
     {
       "id": "txnews3",
       "name": "腾讯新闻3",
-      "keys": ["sy_signurl_txnews", "sy_cookie_txnews","video_txnews"],
+      "keys": ["sy_signurl_txnews3", "sy_cookie_txnews3","video_txnews3"],
       "author": "@sunert",
       "settings": [
         {
@@ -78,9 +78,9 @@
        "script": "https://gitee.com/Sunert/Scripts/raw/master/Task/txnews3.js"
            },
     {
-      "id": "txnews3",
-      "name": "腾讯新闻3",
-      "keys": ["sy_signurl_txnews", "sy_cookie_txnews","video_txnews"],
+      "id": "txnews4",
+      "name": "腾讯新闻4",
+      "keys": ["sy_signurl_txnews4", "sy_cookie_txnews4","video_txnews4"],
       "author": "@sunert",
       "settings": [
         {
@@ -97,9 +97,9 @@
           "type": "boolean"
         }
       ],
-       "repo": "https://gitee.com/Sunert/Scripts/blob/master/Task/txnews3.js",
+       "repo": "https://gitee.com/Sunert/Scripts/blob/master/Task/txnews4.js",
        "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/txnews.png", "https://raw.githubusercontent.com/Orz-3/task/master/txnews.png"],
-       "script": "https://gitee.com/Sunert/Scripts/raw/master/Task/txnews3.js"
+       "script": "https://gitee.com/Sunert/Scripts/raw/master/Task/txnews4.js"
     }
   ]
 }
