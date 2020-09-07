@@ -1,5 +1,5 @@
 {
-  "id": "1653379593",
+  "id": "yihetan.app.sub",
   "name": "1653379593 签到应用订阅",
   "author": "@Sunert",
   "icon": "https://raw.githubusercontent.com/1653379593/The-picture/master/Agenhc.jpg",
@@ -23,3 +23,6 @@
           "name": "调试日志",
           "val": false,
           "type": "boolean"
+
+  ]
+}
