@@ -1,0 +1,33 @@
+{
+  "id": "1653379593.app.sub",
+  "name": "1653379593 签到应用订阅",
+  "author": "@1653379593",
+  "icon": "https://raw.githubusercontent.com/1653379593/The-picture/master/Agenhc.jpg",
+  "repo": "https://github.com/1653379593/Surge",
+  "apps": [
+    {
+      "id": "txnews",
+      "name": "腾讯新闻",
+      "keys": ["sy_signurl_txnews", "sy_cookie_txnews","video_txnews"],
+      "author": "@sunert",
+      "settings": [
+        {
+          "id": "notifynum",
+          "name": "通知频率",
+          "val": 4,
+          "type": "number",
+          "desc": "视频红包间隔通知开为1，常关为0(默认4次)"
+        },
+        {
+          "id": "logsturn",
+          "name": "调试日志",
+          "val": false,
+          "type": "boolean"
+        }
+      ],
+       "repo": "https://gitee.com/Sunert/Scripts/blob/master/Task/txnews.js",
+       "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/txnews.png", "https://raw.githubusercontent.com/Orz-3/task/master/txnews.png"],
+       "script": "https://gitee.com/Sunert/Scripts/raw/master/Task/txnews.js"
+    }
+  ]
+}
