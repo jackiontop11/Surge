@@ -6,7 +6,6 @@
   "repo": "https://github.com/1653379593/Surge",
   "apps": [
     {
-       {
       "id": "txnews",
       "name": "腾讯新闻",
       "keys": ["sy_signurl_txnews", "sy_cookie_txnews","video_txnews"],
@@ -29,5 +28,7 @@
        "repo": "https://gitee.com/Sunert/Scripts/blob/master/Task/txnews.js",
        "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/txnews.png", "https://raw.githubusercontent.com/Orz-3/task/master/txnews.png"],
        "script": "https://gitee.com/Sunert/Scripts/raw/master/Task/txnews.js"
+      ]
+    }
   ]
 }
