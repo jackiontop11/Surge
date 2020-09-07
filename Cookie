@@ -46,8 +46,5 @@ qq会员获取cookie = type=http-request,pattern=https:\/\/proxy.vac.qq.com\/cgi
 # > 腾讯新闻
 腾讯新闻 = script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews.js,type=http-request,pattern=https:\/\/api\.inews\.qq\.com\/event\/v1\/user\/event\/report\?, requires-body=true
 
-# > 腾讯新闻2
-腾讯新闻 = script-path=https://raw.githubusercontent.com/1653379593/Surge/master/txnews2,type=http-request,pattern=https:\/\/api\.inews\.qq\.com\/event\/v1\/user\/event\/report\?, requires-body=true
-
 [MITM]
 hostname = %APPEND% api.m.jd.com, iface?.iqiyi.com, nebula.kuaishou.com, *.bilibili.com, *.rr.tv, *.rrys2019.com, ios.zmzapi.com, music.163.com, c.tieba.baidu.com, www.52pojie.cn, zt.wps.cn, proxy.vac.qq.com, api.inews.qq.com
