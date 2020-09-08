@@ -3,7 +3,7 @@
 * 脚本来源为以下大佬，仅供个人使用.
 
 
-### Loon脚本订阅配置：
+### Surge脚本订阅配置：
 
 * [Script](https://raw.githubusercontent.com/1653379593/Surge/master/Script) 脚本订阅
 
