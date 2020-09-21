@@ -1,4 +1,10 @@
-hostname = api.bilibili.com
+#!name=bilibili - 一盒糖
+#!desc=哔哩哔哩解锁会员
+#!system=ios
 
+[Script]
 https:\/\/api\.bilibili\.com\/pgc\/player\/api\/playurl url 302 http://api.jucatyo.com/playurl
 https:\/\/api.bilibili.com\/pgc\/view\/app\/season url 302 http://api.jucatyo.com/season
+
+[MITM]
+hostname = %APPEND% api.bilibili.com
