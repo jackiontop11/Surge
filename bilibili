@@ -10,9 +10,9 @@ BliBli港澳台 = type=http-response,pattern=https:\/\/api\.bilibili\.com\/pgc\/
 hostname = api.bilibili.com
 */
 
-const Group = '📺 DomesticMedia'; //Your policy group.
-const TW = '🇹🇼 TaiWan'; //Your Taiwan sub-policy name.
-const HK = '🇭🇰 HK - FB'; //Your Hong Kong sub-policy name.
+const Group = '🌏𝐀𝐬𝐢𝐚𝐧𝐌𝐞𝐝𝐢𝐚'; //Your policy group.
+const TW = '🇨🇳TW'; //Your Taiwan sub-policy name.
+const HK = '🇭🇰HK'; //Your Hong Kong sub-policy name.
 
 const obj = JSON.parse($response.body).result.title;
 const current = $surge.selectGroupDetails().decisions[Group];
