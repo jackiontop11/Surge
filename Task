@@ -21,7 +21,7 @@ AppMonitor.js = type=cron,cronexp="0 0-23/1 * * *",wake-system=1,script-path=htt
 #机场流量 = type=cron,cronexp="0 6 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/flow.js
 
 # > 机场签到
-#机场签到 = type=cron,cronexp="1 6 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkin_env.js
+机场签到 = type=cron,cronexp="1 6 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkin_env.js
 
 # > 机场签到Cookie
 #机场签到Cookie版 = type=cron,cronexp="2 6 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkincookie_env.js
