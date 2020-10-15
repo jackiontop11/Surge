@@ -1,6 +1,5 @@
-#!name=TikTok
-#!desc=解锁TikTok去水印
-#!system=ios
+#!name=YouTube
+#!desc=YouTube去广告
 
 [Rule]
 # > YouTube 去片头广告
