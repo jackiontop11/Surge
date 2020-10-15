@@ -1,0 +1,14 @@
+#!name=TikTok
+#!desc=解锁TikTok去水印
+#!system=ios
+
+[Rule]
+# > YouTube 去片头广告
+URL-REGEX,^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier),REJECT-TINYGIF
+
+[Script]
+# > YouTube
+//YouTube.js = script-path=https://Choler.github.io/Surge/Script/YouTube.js,type=http-request,pattern=^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier)
+
+[MITM]
+hostname = %APPEND% *.googlevideo.com
