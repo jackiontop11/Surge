@@ -43,6 +43,11 @@ clarity.js = requires-body=1,max-size=0,script-path=https://raw.githubuserconten
 人人视频 旧版本api限制解除  = type=http-request,pattern=^https:\/\/api\.rr\.tv,script-path= https://raw.githubusercontent.com/id77/QuantumultX/master/Script/rrtv.js
 # > 人人视频 解锁AI原画 (by@george Jiang & R)
 rrtv.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/rrtv.js,type=http-response,pattern=^https:\/\/api\.rr\.tv(\/user\/privilege\/list|\/ad\/getAll|\/rrtv-video\/v4plus\/season\/detail)
+# > 陆琪讲故事
+luqi.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/luqi.js,type=http-response,pattern=^https:\/\/www\.luqijianggushi\.com\/api\/v2\/user\/get
+# 蜗牛睡眠会员（by 黑黑酱）
+wnsm.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/wnsm.js,type=http-response,pattern=^https:\/\/snailsleep\.net\/snail\/v1\/profile\/get
+
 
 [MITM]
-hostname = %APPEND% *.googlevideo.com, *.amemv.com, api.m.jd.com, trade-acs.m.taobao.com, *.snssdk.com, api.mvmtv.com, app.api.versa-ai.com, claritywallpaper.com, *.rr.tv
+hostname = %APPEND% *.googlevideo.com, *.amemv.com, api.m.jd.com, trade-acs.m.taobao.com, *.snssdk.com, api.mvmtv.com, app.api.versa-ai.com, claritywallpaper.com, *.rr.tv, api.rr.tv, api.growingio.com, tj.youzanyun.com
