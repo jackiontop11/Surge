@@ -1,0 +1,44 @@
+#!name=Script - 一盒糖
+#!desc=脚本合集
+#!system=ios
+
+[Rule]
+# > YouTube 去片头广告
+URL-REGEX,^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier),REJECT-TINYGIF
+# > 抖音
+DOMAIN-SUFFIX, amemv.com, DIRECT
+DOMAIN-SUFFIX, byteimg.com, DIRECT
+DOMAIN-SUFFIX, dig.bdurl.net, DIRECT
+DOMAIN-SUFFIX, ibytedtos.com, REJECT
+DOMAIN-SUFFIX, ipstatp.com, REJECT
+
+[URL Rewrite]
+# > 去广告&水印
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/feed\/ https://aweme.snssdk.com/aweme/v1/feed/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/aweme\/post\/ https://aweme.snssdk.com/aweme/v1/aweme/post/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/follow\/feed\/ https://aweme.snssdk.com/aweme/v1/follow/feed/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/nearby\/feed\/ https://aweme.snssdk.com/aweme/v1/nearby/feed/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/search\/item\/ https://aweme.snssdk.com/aweme/v1/search/item/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/general\/search\/single\/ https://aweme.snssdk.com/aweme/v1/general/search/single/ header
+^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/hot/search\/video\/list\/ https://aweme.snssdk.com/aweme/v1/hot/search/video/list/ header
+
+[Script]
+# > 去广告&水印
+http-response ^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Choler/Surge/master/Script/douyin.js,tag=抖音
+Rewrite: BoxJs = type=http-request,pattern=^https?://boxjs.net,script-path=https://gitee.com/chavyleung/scripts/raw/master/box/chavy.boxjs.js, requires-body=true, timeout=120
+# > 京东比价
+http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
+# > 淘宝比价
+http-request ^http://.+/amdc/mobileDispatch requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
+http-response ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
+# > 皮皮虾  Remove Ad & Logo
+Super.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/Super.js,type=http-response,pattern=^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list)
+# > 大千视界
+dqsj.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/dqsj.js,type=http-response,pattern=^https:\/\/api\.mvmtv\.com\/index\.php.*(c=user.*a=info|a=addr.*vid=.*)
+# 马卡龙 (By @CheeryTodo)
+mkl.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/mkl.js,type=http-response,pattern=https://app.api.versa-ai.com/pay/order/iap/check
+# > 克拉壁纸  解锁付费壁纸 (By @Dachaw)
+clarity.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/clarity.js,type=http-response,pattern=^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll)
+
+[MITM]
+hostname = %APPEND% *.googlevideo.com, *.amemv.com, api.m.jd.com, trade-acs.m.taobao.com, *.snssdk.com, api.mvmtv.com, app.api.versa-ai.com, claritywallpaper.com
