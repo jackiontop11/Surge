@@ -23,8 +23,8 @@ DOMAIN-SUFFIX, ipstatp.com, REJECT
 ^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/hot/search\/video\/list\/ https://aweme.snssdk.com/aweme/v1/hot/search/video/list/ header
 
 [Script]
-# 人人视频版本限制🚫解除
-^https:\/\/api\.rr\.tv url script-request-header https://raw.githubusercontent.com/1653379593/Surge/master/rrtv.js
+# 人人视频 旧版本api限制解除
+人人视频 旧版本api限制解除  = type=http-request,pattern=^https:\/\/api\.rr\.tv,script-path= https://raw.githubusercontent.com/id77/QuantumultX/master/Script/rrtv.js
 # > 人人视频 解锁AI原画 (by@george Jiang & R)
 rrtv.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/rrtv.js,type=http-response,pattern=^https:\/\/api\.rr\.tv(\/user\/privilege\/list|\/ad\/getAll|\/rrtv-video\/v4plus\/season\/detail)
 # > 人人视频 去广告
@@ -48,4 +48,4 @@ mkl.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.co
 clarity.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/clarity.js,type=http-response,pattern=^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll)
 
 [MITM]
-hostname = %APPEND% *.googlevideo.com, *.amemv.com, api.m.jd.com, trade-acs.m.taobao.com, *.snssdk.com, api.mvmtv.com, app.api.versa-ai.com, claritywallpaper.com, api.rr.tv
+hostname = %APPEND% *.googlevideo.com, *.amemv.com, api.m.jd.com, trade-acs.m.taobao.com, *.snssdk.com, api.mvmtv.com, app.api.versa-ai.com, claritywallpaper.com, *.rr.tv
