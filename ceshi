@@ -50,4 +50,5 @@ wnsm.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.c
 
 
 [MITM]
-hostname = %APPEND% *.googlevideo.com, *.amemv.com, api.m.jd.com, trade-acs.m.taobao.com, *.snssdk.com, api.mvmtv.com, app.api.versa-ai.com, claritywallpaper.com, *.rr.tv, api.rr.tv, api.growingio.com, tj.youzanyun.com
+hostname = %APPEND% *.googlevideo.com, *.amemv.com, api.m.jd.com, trade-acs.m.taobao.com, *.snssdk.com, api.mvmtv.com, app.api.versa-ai.com, claritywallpaper.com, *.rr.tv, api.rr.tv, www.luqijianggushi.com
+
