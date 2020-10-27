@@ -23,13 +23,6 @@ DOMAIN-SUFFIX, ipstatp.com, REJECT
 ^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/hot/search\/video\/list\/ https://aweme.snssdk.com/aweme/v1/hot/search/video/list/ header
 
 [Script]
-# 人人视频 旧版本api限制解除
-人人视频 旧版本api限制解除  = type=http-request,pattern=^https:\/\/api\.rr\.tv,script-path= https://raw.githubusercontent.com/id77/QuantumultX/master/Script/rrtv.js
-# > 人人视频 解锁AI原画 (by@george Jiang & R)
-rrtv.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/rrtv.js,type=http-response,pattern=^https:\/\/api\.rr\.tv(\/user\/privilege\/list|\/ad\/getAll|\/rrtv-video\/v4plus\/season\/detail)
-# > 人人视频 去广告
-rrsp_video = type=http-response,requires-body=true,pattern=^https?:\/\/api\.rr\.tv\/watch\/v\d\/get_movie_info,script-path=https://Choler.github.io/Surge/Script/rrsp.js
-rrsp_banner = type=http-response,requires-body=true,pattern=^https?:\/\/api\.rr\.tv\/v\dplus\/index\/channel$,script-path=https://Choler.github.io/Surge/Script/rrsp.js
 # > 去广告&水印
 http-response ^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Choler/Surge/master/Script/douyin.js,tag=抖音
 Rewrite: BoxJs = type=http-request,pattern=^https?://boxjs.net,script-path=https://gitee.com/chavyleung/scripts/raw/master/box/chavy.boxjs.js, requires-body=true, timeout=120
@@ -46,6 +39,10 @@ dqsj.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/S
 mkl.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/mkl.js,type=http-response,pattern=https://app.api.versa-ai.com/pay/order/iap/check
 # > 克拉壁纸  解锁付费壁纸 (By @Dachaw)
 clarity.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/clarity.js,type=http-response,pattern=^https:\/\/claritywallpaper\.com\/clarity\/api\/(userInfo|special\/queryByCatalogAll)
+# 人人视频 旧版本api限制解除
+人人视频 旧版本api限制解除  = type=http-request,pattern=^https:\/\/api\.rr\.tv,script-path= https://raw.githubusercontent.com/id77/QuantumultX/master/Script/rrtv.js
+# > 人人视频 解锁AI原画 (by@george Jiang & R)
+rrtv.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/rrtv.js,type=http-response,pattern=^https:\/\/api\.rr\.tv(\/user\/privilege\/list|\/ad\/getAll|\/rrtv-video\/v4plus\/season\/detail)
 
 [MITM]
 hostname = %APPEND% *.googlevideo.com, *.amemv.com, api.m.jd.com, trade-acs.m.taobao.com, *.snssdk.com, api.mvmtv.com, app.api.versa-ai.com, claritywallpaper.com, *.rr.tv
