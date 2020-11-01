@@ -1,56 +1,44 @@
-#!name=Script - 一盒糖
-#!desc=脚本合集
+#!name=Cookie - 一盒糖
+#!desc=定时签到脚本Cookie获取
 #!system=ios
 
-[Rule]
-# > YouTube 去片头广告
-URL-REGEX,^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier),REJECT-TINYGIF
-# > 抖音
-DOMAIN-SUFFIX, amemv.com, DIRECT
-DOMAIN-SUFFIX, byteimg.com, DIRECT
-DOMAIN-SUFFIX, dig.bdurl.net, DIRECT
-DOMAIN-SUFFIX, ibytedtos.com, REJECT
-DOMAIN-SUFFIX, ipstatp.com, REJECT
-
-[URL Rewrite]
-# > 抖音去广告&水印
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/feed\/ https://aweme.snssdk.com/aweme/v1/feed/ header
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/aweme\/post\/ https://aweme.snssdk.com/aweme/v1/aweme/post/ header
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/follow\/feed\/ https://aweme.snssdk.com/aweme/v1/follow/feed/ header
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/nearby\/feed\/ https://aweme.snssdk.com/aweme/v1/nearby/feed/ header
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/search\/item\/ https://aweme.snssdk.com/aweme/v1/search/item/ header
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/general\/search\/single\/ https://aweme.snssdk.com/aweme/v1/general/search/single/ header
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/hot/search\/video\/list\/ https://aweme.snssdk.com/aweme/v1/hot/search/video/list/ header
-# > 哔哩哔哩去广告
-URL-REGEX,https://app.bilibili.com/x/v2/(splash|search/(defaultword|square)),REJECT
-URL-REGEX,https://api.bilibili.com/x/v2/dm/ad,REJECT
-
 [Script]
-# > Boxjs
-Rewrite: BoxJs = type=http-request,pattern=^https?://boxjs.net,script-path=https://gitee.com/chavyleung/scripts/raw/master/box/chavy.boxjs.js, requires-body=true, timeout=120
-# > 哔哩哔哩港澳台切换
-Bili Region = type=http-response,pattern=https:\/\/api\.bilibili\.com\/pgc\/view\/app\/season\?access_key,requires-body=1,max-size=0,control-api=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js
-# > 哔哩哔哩番剧默认开启1080P+
-http-response https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Script/Bilibili/BiliHD.js, tag=Bilipj
-# > 哔哩哔哩去广告
-# 首页Tab
-http-response https://app.bilibili.com/x/resource/show/tab\?access_key requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20tab.js,tag=哔哩哔哩首页Tab
-http-response https://app.bilibili.com/x/v2/feed/index\?access_key requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20feed.js,tag=哔哩哔哩首页Tab
-# 个人中心
-http-response https://app.bilibili.com/x/v2/account/mine\?access_key requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20account.js,tag=哔哩哔哩个人中心(精简)
-http-response https://app.bilibili.com/x/v2/view\?access_key requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20view%20relate.js,tag=哔哩哔哩个人中心(精简)
-http-response https://api.bilibili.com/x/v2/reply/main\?access_key requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20reply.js,tag=哔哩哔哩个人中心(精简)
-http-response https://api.live.bilibili.com/xlive/app-room/v1/index/getInfoByRoom\?access_key requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20live.js,tag=哔哩哔哩直播
-# > 抖音去广告&水印
-http-response ^https?:\/\/aweme\.snssdk\.com\/aweme\/v1\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/ requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Choler/Surge/master/Script/douyin.js,tag=抖音
-Rewrite: BoxJs = type=http-request,pattern=^https?://boxjs.net,script-path=https://gitee.com/chavyleung/scripts/raw/master/box/chavy.boxjs.js, requires-body=true, timeout=120
-# > 京东比价
-http-response ^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
-# > 淘宝比价
-http-request ^http://.+/amdc/mobileDispatch requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
-http-response ^https?://trade-acs\.m\.taobao\.com/gw/mtop\.taobao\.detail\.getdetail requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/tb_price.js
-# > 皮皮虾  Remove Ad & Logo
-Super.js = requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/Liquor030/Sub_Ruleset/master/Script/Super.js,type=http-response,pattern=^https?://.*\.snssdk\.com/bds/(feed/stream|comment/cell_reply|cell/cell_comment|cell/detail|ward/list|user/favorite|user/cell_coment|user/cell_userfeed|user/publish_list)
+# > 京东
+# 浏览器登录 https://bean.m.jd.com 点击签到并且出现签到日历
+获取京东Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+# > 爱奇艺
+爱奇艺获取Cookie = type=http-request,pattern=^https:\/\/iface\d\.iqiyi\.com\/.+?psp_cki=,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+
+# > 快手极速版
+kuaishou.js = script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/kuaishou.js,type=http-request,pattern=https:\/\/nebula\.kuaishou\.com\/rest\/n\/nebula\/activity\/earn\/overview
+
+# > 哔哩哔哩
+# 浏览器访问并登录: https://www.bilibili.com 或 https://live.bilibili.com 系统提示:获取Cookie: 成功
+bilibili.cookie.js = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js,type=http-request,pattern=^https:\/\/(www|live)\.bilibili\.com\/?.?
+
+# > 人人视频
+rrtv.cookie.js = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js,type=http-request,pattern=^https:\/\/api\.rr\.tv\/user\/profile
+
+# > 字幕组
+zimuzu.cookie.js = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js,type=http-request,pattern=^https?:\/\/(www\.)?rrys2020\.com\/?.?
+zimuzu.cookie.js = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/zimuzu/zimuzu.cookie.js,type=http-request,pattern=^http:\/\/ios.zmzapi.com\/index.php.*a=(mobile_)?login
+
+# > 网易云音乐
+#1. 先登录: <https://music.163.com/m/login>
+#2. 再访问: <https://music.163.com/#/user/level>
+#3. 提示: `获取会话: 成功!`
+neteasemusic.cookie.js = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.cookie.js,type=^https:\/\/music.163.com\/weapi\/user\/level,requires-body=true
+
+# > 百度贴吧
+# 打开百度贴吧App后，点击"我的"
+贴吧获取Cookie = type=http-request,pattern=https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
+
+# > 吾爱破解
+吾爱Cookie = type=http-request,pattern=https:\/\/www\.52pojie\.cn\/home\.php\?,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
+
+# > WPS
+wps.cookie.js = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wps/wps.cookie.js,type=http-request,pattern=^https:\/\/zt.wps.cn\/2018\/docer_check_in\/api\/act_list
 
 [MITM]
-hostname = %APPEND% *.googlevideo.com, *.amemv.com, www.bilibili.com, api.bilibili.com, app.bilibili.com, api.live.bilibili.com, api.m.jd.com, trade-acs.m.taobao.com, *.snssdk.com, api.mvmtv.com, app.api.versa-ai.com, claritywallpaper.com, *.rr.tv, api.rr.tv, www.luqijianggushi.com
+hostname = %APPEND% api.m.jd.com, iface?.iqiyi.com, nebula.kuaishou.com, *.bilibili.com, *.rr.tv, *.rrys2019.com, ios.zmzapi.com, music.163.com, c.tieba.baidu.com, www.52pojie.cn, zt.wps.cn, proxy.vac.qq.com, wapside.189.cn:9001, api.inews.qq.com
