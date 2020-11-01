@@ -2,7 +2,7 @@
 #!desc=YouTube去广告
 
 [Rule]
-# > YouTube 去片头广告
+# > 121212
 URL-REGEX,^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier),REJECT-TINYGIF
 
 [Script]
