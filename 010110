@@ -68,12 +68,12 @@ keyword-filter = icloud,ocsp,logs,analytic,ads,imap,adthor,applovin,appnext,talk
 
 [Proxy Group]
 𝐏𝐫𝐨𝐱𝐲 = select, 𝐀𝐮𝐭𝐨, 𝐒𝐞𝐥𝐞𝐜𝐭, 𝐅𝐚𝐥𝐥𝐛𝐚𝐜𝐤
-📹 YouTube = select, 🔰 节点选择, 🎯 直接连接
-💻 Telegram = select, 🔰 节点选择, 🎯 直接连接
-🏎️ Speedtest = select, 🔰 节点选择, 🎯 直接连接
+📹 YouTube = select, 𝐏𝐫𝐨𝐱𝐲, 🎯 直接连接
+💻 Telegram = select, 𝐏𝐫𝐨𝐱𝐲, 🎯 直接连接
+🏎️ Speedtest = select, 𝐏𝐫𝐨𝐱𝐲, 🎯 直接连接
 🎧 网易云音乐 = select, 🎧, 🎯 直接连接
-📱 苹果服务 = select, 🎯 直接连接, 🔰 节点选择
-🐳 漏网之鱼 = select, 🔰 节点选择, 🎯 直接连接
+📱 苹果服务 = select, 🎯 直接连接, 𝐏𝐫𝐨𝐱𝐲
+🐳 漏网之鱼 = select, 𝐏𝐫𝐨𝐱𝐲, 🎯 直接连接
 🔘 手动选择 = select, policy-path=订阅地址
 ♻️ 延迟最低 = url-test, policy-path=订阅地址, url=http://www.gstatic.com/generate_204, interval=600, tolerance=50
 🟢 故障切换 = fallback, policy-path=订阅地址, url=http://www.gstatic.com/generate_204, interval=600, tolerance=50
@@ -95,9 +95,9 @@ RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Sub
 # Telegram
 RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Sub/Telegram.list,💻 Telegram
 # > Outlook、Gmail
-RULE-SET,https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/Mail.list,🔰 节点选择
+RULE-SET,https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/Mail.list,𝐏𝐫𝐨𝐱𝐲
 # > GoogleDrive
-RULE-SET,https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/GoogleDrive.list,🔰 节点选择
+RULE-SET,https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/GoogleDrive.list,𝐏𝐫𝐨𝐱𝐲
 # Speedtest
 RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Sub/Speedtest.list,🏎️ Speedtest
 # > Apple
@@ -112,9 +112,9 @@ RULE-SET,https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/Special.
 # >Unlock NeteaseMusic
 RULE-SET,https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/UnlockNeteaseMusic.list,🎧 网易云音乐
 # > GlobalMedia
-RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/GlobalMedia.list,🔰 节点选择
+RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/GlobalMedia.list,𝐏𝐫𝐨𝐱𝐲
 # > Global
-RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Global.list,🔰 节点选择
+RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Global.list,𝐏𝐫𝐨𝐱𝐲
 # > AsianMedia
 RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/AsianMedia.list,🎯 直接连接
 # > Domestic
