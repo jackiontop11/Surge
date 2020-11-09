@@ -67,14 +67,10 @@ keyword-filter = icloud,ocsp,logs,analytic,ads,imap,adthor,applovin,appnext,talk
 🎧 = http, music.desperadoj.com, 30002, username=Netease Music, password=none
 
 [Proxy Group]
-🔰 节点选择 = select, ♻️ 延迟最低, 🟢 故障切换, 🔘 手动选择,🔁负载均衡 
-🖥 Netflix = select, policy-path=订阅地址
-🎵 TikTok = select, 🔰 节点选择, 🎯 直接连接
+🔰 节点选择 = select, ♻️ 延迟最低, 🟢 故障切换, 🔘 手动选择, 🔁负载均衡
 📹 YouTube = select, 🔰 节点选择, 🎯 直接连接
-🔞 Pornhub = select, 🔰 节点选择, 🎯 直接连接
 💻 Telegram = select, 🔰 节点选择, 🎯 直接连接
 🏎️ Speedtest = select, 🔰 节点选择, 🎯 直接连接
-💳 PayPal = select, 🔘 手动选择, 🎯 直接连接
 🎧 网易云音乐 = select, 🎧, 🎯 直接连接
 📱 苹果服务 = select, 🎯 直接连接, 🔰 节点选择
 🐳 漏网之鱼 = select, 🔰 节点选择, 🎯 直接连接
@@ -83,6 +79,17 @@ keyword-filter = icloud,ocsp,logs,analytic,ads,imap,adthor,applovin,appnext,talk
 🟢 故障切换 = fallback, policy-path=订阅地址, url=http://www.gstatic.com/generate_204, interval=600, tolerance=50
 🔁负载均衡 = load-balance, persistent=1, policy-path=订阅地址, update-interval=0
 🚫 全球拦截 = select, 🚫 广告拦截, 🚫 拦截反馈, 🎯 直接连接
+網易雲音樂 = select, policy-path=https://sub.store/download/NetEaseCloudMusic, update-interval=0
+🇭🇰HK = url-test, url=http://www.gstatic.com/generate_204, policy-path=https://sub.store/download/collection/Agnehc, update-interval=0, policy-regex-filter=HK|香港, timeout=0, interval=0, tolerance=0
+🇨🇳TW = url-test, url=http://www.gstatic.com/generate_204, policy-path=https://sub.store/download/collection/Agnehc, update-interval=0, policy-regex-filter=TW|台湾, timeout=0, interval=0, tolerance=0
+🇸🇬SG = url-test, url=http://www.gstatic.com/generate_204, policy-path=https://sub.store/download/collection/Agnehc, update-interval=0, policy-regex-filter=SG|新加坡, timeout=0, interval=0, tolerance=0
+🇯🇵JP = url-test, url=http://www.gstatic.com/generate_204, policy-path=https://sub.store/download/collection/Agnehc, update-interval=0, policy-regex-filter=JP|日本, timeout=0, interval=0, tolerance=0
+🇰🇷KR = url-test, url=http://www.gstatic.com/generate_204, policy-path=https://sub.store/download/collection/Agnehc, update-interval=0, policy-regex-filter=KR|韩国, timeout=0, interval=0, tolerance=0
+🇺🇸US = url-test, url=http://www.gstatic.com/generate_204, policy-path=https://sub.store/download/collection/Agnehc, update-interval=0, policy-regex-filter=US|美国, timeout=0, interval=0, tolerance=0
+🏳️‍🌈IPLC = select, policy-path=https://sub.store/download/collection/Agnehc, update-interval=0, policy-regex-filter=IPLC|iplc
+🏳️‍🌈IEPL = select, policy-path=https://sub.store/download/collection/Agnehc, update-interval=0, policy-regex-filter=IEPL|iepl
+LeiSu = select, policy-path=https://sub.store/download/LeiSu, update-interval=0
+樱云 = select, policy-path=https://sub.store/download/yinyun
 
 [Rule]
 # CUSTOM RULE
@@ -162,7 +169,6 @@ hdslb.com = server:119.29.29.29
 # > Redirect Google Service
 ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
 
-
 [MITM]
 skip-server-cert-verify = true
 hostname = *.amemv.com, *.iydsj.com, *.k.sohu.com, *.kakamobi.cn, *.kingsoft-office-service.com, *.meituan.net, *.musical.ly, *.ofo.com, *.pstatp.com, *.snssdk.com, *.tiktokv.com, *.tv.sohu.com, *.uve.weibo.com, *.ydstatic.com, 101.201.175.228, 119.18.193.135, 123.59.31.1, 154.8.131.171, 182.92.251.113, 4gimg.map.qq.com, a.apicloud.com, a.qiumibao.com, acs.m.taobao.com, act.vip.iqiyi.com, api*.futunn.com, api.21jingji.com, api.caijingmobile.com, api.chelaile.net.cn, api.daydaycook.com.cn, api.douban.com, api.gotokeep.com, api.haohaozhu.cn, api.huomao.com, api.intsig.net, api.izuiyou.com, api.jr.mi.com, api.jxedt.com, api.kkmh.com, api.m.jd.com, api.meipian.me, api.mgzf.com, api.psy-1.com, api.qbb6.com, api.rr.tv, api.smzdm.com, api.vistopia.com.cn, api.waitwaitpay.com, api.wallstreetcn.com, api.weibo.cn, api.xiachufang.com, api.yangkeduo.com, api.zhihu.com, api.zhuishushenqi.com, api-mifit*.huami.com, api-release.wuta-cam.com, app.58.com, app.api.ke.com, app.bilibili.com, app.mixcapp.com, app.poizon.com, app.variflight.com, app.wy.guahao.com, app.xinpianchang.com, app.yinxiang.com, app.zhuanzhuan.com, appapi.huazhu.com, app-api.smzdm.com, appconf.mail.163.com, appv6.55haitao.com, b.zhuishushenqi.com, business-cdn.shouji.sogou.com, c.m.163.com, cap.caocaokeji.cn, capi.mwee.cn, cdn.moji.com, cdnfile1.msstatic.com, channel.beitaichufang.com, client.mail.163.com, clientaccess.10086.cn, cms.daydaycook.com.cn, consumer.fcbox.com, creditcardapp.bankcomm.com, daoyu.sdo.com, dl.app.gtja.com, dsa-mfp.fengshows.cn, dxy.com, e.dangdang.com, easyreadfs.nosdn.127.net, g.cdn.pengpengla.com, gateway.shouqiev.com, guide-acs.m.taobao.com, gw.alicdn.com, gw.csdn.net, gw-passenger.01zhuanche.com, heic.alicdn.com, i.ys7.com, iapi.bishijie.com, iface.iqiyi.com, ih2.ireader.com, imeclient.openspeech.cn, img.jiemian.com, img01.10101111cdn.com, interface.music.163.com, ios.lantouzi.com, ios.wps.cn, jump2.bdimg.com, kaola-haitao.oss.kaolacdn.com, learn.chaoxing.com, list-app-m.i4.cn, m*.amap.com, m.client.10010.com, m.ibuscloud.com, m.tuniu.com, m.yap.yahoo.com, manga.bilibili.com, mapi.mafengwo.cn, media.qyer.com, mlife.jf365.boc.cn, mob.mddcloud.com.cn, mobi.360doc.com, mp.weixin.qq.com, mrobot.pcauto.com.cn, mrobot.pconline.com.cn, ms.jr.jd.com, msspjh.emarbox.com, news.ssp.qq.com, newsso.map.qq.com, nnapp.cloudbae.cn, open.qyer.com, p.du.163.com, pan.baidu.com, pic*.chelaile.net, pic1cdn.cmbchina.com, pocketuni.net, portal-xunyou.qingcdn.com, pss.txffp.com, r.inews.qq.com, render.alipay.com, resrelease.wuta-cam.com, restapi.iyunmai.com, richmanapi.jxedt.com, rtbapi.douyucdn.cn, s*.zdmimg.com, s.youtube.com, service.4gtv.tv, slapi.oray.net, smkmp.96225.com, snailsleep.net, ss0.bdstatic.com, ssl.kohsocialapp.qq.com, static.vuevideo.net, static1.keepcdn.com, status.boohee.com, support.you.163.com, thor.weidian.com, tieba.baidu.com, tiku.zhan.com, weibointl.api.weibo.cn, www.bodivis.com.cn, www.dandanzan.com, www.flyertea.com, www.hxeduonline.com, www.iyingdi.cn, www.tieba.com, www.youtube.com, www.zhihu.com, www.zybang.com, xyz.cnki.net, xyst.yuanfudao.com, youtubei.googleapis.com, yxyapi*.drcuiyutao.com, zhidao.baidu.com
@@ -171,4 +177,4 @@ ca-p12 = MIIJ4QIBAzCCCacGCSqGSIb3DQEHAaCCCZgEggmUMIIJkDCCBEcGCSqGSIb3DQEHBqCCBDg
 
 [Script]
 # > Speed up download app ios
-dns dnspod script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Surge/dnspod.js,script-update-interval=0
+dnspod = script-path=https://raw.githubusercontent.com/langkhach270389/Scripting/master/Surge/dnspod.js,script-update-interval=0,type=dns
