@@ -5,15 +5,15 @@
 
 ### Surge脚本订阅配置：
 
-* [Agnehc](https://raw.githubusercontent.com/1653379593/Surge/master/Agnehc?token=AMVEVXZS7SQQLBH6KU7KDGC7V7B4W) 个人配置
+* [Agnehc](https://raw.githubusercontent.com/1653379593/Surge/master/Agnehc) 个人配置
 
-* [Script.sgmodule](https://raw.githubusercontent.com/1653379593/Surge/master/Script.sgmodule?token=AMVEVX5XXPFN72CUVIH6BDC7V7BCC) 脚本订阅
+* [Script.sgmodule](https://raw.githubusercontent.com/1653379593/Surge/master/Script.sgmodule) 脚本订阅
 
-* [Cookie.sgmodule](https://raw.githubusercontent.com/1653379593/Surge/master/Cookie.sgmodule?token=AMVEVX3J3G7HICPETAFOZWC7V7BXK)获取Cookie订阅
+* [Cookie.sgmodule](https://raw.githubusercontent.com/1653379593/Surge/master/Cookie.sgmodule)获取Cookie订阅
 
-* [Task.sgmodule](https://raw.githubusercontent.com/1653379593/Surge/master/Task.sgmodule?token=AMVEVX2ZRJLOBDC3PSGXXN27V7BDU) 定时任务订阅
+* [Task.sgmodule](https://raw.githubusercontent.com/1653379593/Surge/master/Task.sgmodule) 定时任务订阅
 
-* [bilibli.sgmodule](https://raw.githubusercontent.com/1653379593/Surge/master/bilibili.sgmodule?token=AMVEVX4VI6NNKBQM7MWFGZ27V7B64) 解锁哔哩哔哩大会员
+* [bilibli.sgmodule](https://raw.githubusercontent.com/1653379593/Surge/master/bilibili.sgmodule) 解锁哔哩哔哩大会员
 
 ## 免责声明：
 
