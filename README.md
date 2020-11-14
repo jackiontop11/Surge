@@ -5,11 +5,11 @@
 
 ### Surge脚本订阅配置：
 
-* [Script.sgmodule](https://raw.githubusercontent.com/1653379593/Surge/master/Script.sgmodule) 脚本订阅
+* [Script.sgmodule](https://raw.githubusercontent.com/1653379593/Surge/master/Script.sgmodule?token=AMVEVX5XXPFN72CUVIH6BDC7V7BCC) 脚本订阅
 
-* [Cookie.sgmodule](https://raw.githubusercontent.com/1653379593/Surge/master/Cookie.sgmodule)获取Cookie订阅
+* [Cookie.sgmodule](https://raw.githubusercontent.com/1653379593/Surge/master/Cookie.sgmodule?token=AMVEVX7X3WTNXUYSIMJDZFK7V7A7S)获取Cookie订阅
 
-* [Task.sgmodule](https://raw.githubusercontent.com/1653379593/Surge/master/Task.sgmodule) 定时任务订阅
+* [Task.sgmodule](https://raw.githubusercontent.com/1653379593/Surge/master/Task.sgmodule?token=AMVEVX2ZRJLOBDC3PSGXXN27V7BDU) 定时任务订阅
 
 
 ## 免责声明：
