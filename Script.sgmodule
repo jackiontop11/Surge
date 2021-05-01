@@ -2,11 +2,13 @@
 #!desc=脚本合集
 #!system=ios
 
-[Rule]
-# > YouTube 去片头广告
-URL-REGEX,^https?:\/\/[\w-]+\.googlevideo\.com\/.+&(oad|ctier),REJECT-TINYGIF
-
 [URL Rewrite]
+# > YouTube去片头广告
+(^https?:\/\/(?!redirector)[\w-]+\.googlevideo\.com\/((?!dclk_video_ads).)+)(ctier=L)(&.+) $1$3 302
+^https?:\/\/[\w-]+\.googlevideo\.com\/((?!dclk_video_ads).)+&(oad|ctier) - reject
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - reject
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - reject
+^https?:\/\/\s.youtube.com/api/stats/qoe?.*adformat= - reject
 # > 哔哩哔哩去广告
 URL-REGEX,https://app.bilibili.com/x/v2/(splash|search/(defaultword|square)),REJECT
 URL-REGEX,https://api.bilibili.com/x/v2/dm/ad,REJECT
@@ -44,4 +46,4 @@ clarity.js = requires-body=1,max-size=0,script-path=https://raw.githubuserconten
 luqi.js = requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/luqi.js,type=http-response,pattern=^https:\/\/www\.luqijianggushi\.com\/api\/v2\/user\/get
 
 [MITM]
-hostname = %APPEND% *.googlevideo.com, www.bilibili.com, api.bilibili.com, api.live.bilibili.com, ap?.bilibili.com, api.m.jd.com, trade-acs.m.taobao.com, *.snssdk.com, api.mvmtv.com, app.api.versa-ai.com, claritywallpaper.com, www.luqijianggushi.com
+hostname = %APPEND% *.googlevideo.com, www.youtube.com, s.youtube.com, www.bilibili.com, api.bilibili.com, api.live.bilibili.com, ap?.bilibili.com, api.m.jd.com, trade-acs.m.taobao.com, *.snssdk.com, api.mvmtv.com, app.api.versa-ai.com, claritywallpaper.com, www.luqijianggushi.com
