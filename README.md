@@ -5,7 +5,7 @@
 
 ### Surge脚本订阅配置：
 
-* [Agnehc](https://raw.githubusercontent.com/1653379593/Surge/master/Agnehc) 个人配置
+* [Grain-is](https://raw.githubusercontent.com/1653379593/Surge/master/Grain-is) 个人配置
 
 * [Script.sgmodule](https://raw.githubusercontent.com/1653379593/Surge/master/Script.sgmodule) 脚本订阅
 
