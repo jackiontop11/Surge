@@ -8,4 +8,4 @@
 抖音去广告&水印res = type=http-response,pattern=^https?:\/\/.+?\.amemv\.com\/aweme\/v\d\/(feed|aweme\/post|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list)\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Aweme.js
 
 [MITM]
-hostname = *.amemv.com, -*.amemv.com, -*.snssdk.com
+hostname = -*.amemv.com, -*.snssdk.com
