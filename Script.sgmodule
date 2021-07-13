@@ -9,9 +9,6 @@
 ^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - reject
 ^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - reject
 ^https?:\/\/\s.youtube.com/api/stats/qoe?.*adformat= - reject
-# > 哔哩哔哩去广告
-URL-REGEX,https://app.bilibili.com/x/v2/(splash|search/(defaultword|square)),REJECT
-URL-REGEX,https://api.bilibili.com/x/v2/dm/ad,REJECT
 
 [Script]
 # > BoxJs
