@@ -1,0 +1,205 @@
+[General]
+http-api = Tartarus@0.0.0.0:6166
+# > 增强版 Wi-Fi 助理
+# (在 Wi-Fi 网络不佳时尝试使用数据网络建立连接，请仅当使用不限量的数据流量时开启)
+wifi-assist = false
+# > Internet 测试 URL
+internet-test-url = http://wifi.vivo.com.cn/generate_204
+# > 代理测速 URL
+proxy-test-url = http://cp.cloudflare.com/generate_204
+# > 测试超时（秒）
+test-timeout = 5
+# > TLS 引擎
+tls-provider = openssl
+# > IPv6 支持（默认关闭）
+ipv6 = false
+# > 允许 Wi-Fi 访问 (仅 iOS，若允许远程访问将「false」改为「true」)
+allow-wifi-access = false
+wifi-access-http-port = 6152
+wifi-access-socks5-port = 6153
+# > 允许 Wi-Fi 访问 (仅 macOS，若允许远程访问将「127.0.0.1」改为「0.0.0.0」)
+http-listen = 127.0.0.1:6152
+socks5-listen = 127.0.0.1:6153
+# > 兼容模式 (仅 iOS)
+# compatibility-mode = 0
+# > 跳过代理
+skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local, passenger.t3go.cn
+# > 排除简单主机名
+exclude-simple-hostnames = true
+# > Network framwork
+network-framework = false
+# > DNS 服务器 (如无必要不建议使用 DNS over HTTPS)
+dns-server = 119.29.29.29,system
+# > 从 /etc/hosts 读取 DNS 记录
+read-etc-hosts = true
+# 高级设置
+# > 日志级别
+loglevel = notify
+# > 当遇到 REJECT 策略时返回错误页
+show-error-page-for-reject = true
+# > Always Real IP Hosts
+always-real-ip = msftconnecttest.com, msftncsi.com, *.msftconnecttest.com, *.msftncsi.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
+# > TCP Force HTTP Hosts
+force-http-engine-hosts = *.ott.cibntv.net, 123.59.31.1,119.18.193.135, 122.14.246.33, 175.102.178.52, 116.253.24.*, 175.6.26.*, 220.169.153.*
+# > VIF Excluded Routes
+tun-excluded-routes = 239.255.255.250/32
+
+[Replica]
+# [抓取流量] => 过滤器
+# > 隐藏 Apple 请求
+hide-apple-request = true
+# > 隐藏 Crashlytics 请求
+hide-crashlytics-request = true
+# > 隐藏 UDP 会话
+hide-udp = false
+# > 关键词过滤器
+keyword-filter-type = (null)
+keyword-filter = icloud,ocsp,logs,analytic,ads,imap,adthor,applovin,appnext,talk,dropbox,spys
+
+[Proxy]
+𝐃𝐢𝐫𝐞𝐜𝐭 = direct
+𝐑𝐞𝐣𝐞𝐜𝐭 = reject
+
+[Proxy Group]
+𝐓𝐡𝐞 𝐚𝐢𝐫𝐩𝐨𝐫𝐭 = select, policy-path=http://sub.info?url=http%3A%2F%2Faelr.cc%2Flink%2F2Apy0dvPF24EreJS%3Flist%3Dshadowrocket3D1&reset_day=31&expire=2022-08-25&alert=1&title=leisu, update-interval=0, no-alert=0, hidden=0
+𝐃𝐥𝐞𝐫 𝐂𝐥𝐨𝐮𝐝 = url-test, policy-path=https://gist.githubusercontent.com/Darren-X1/0b7d7bc29ffb3f1787192b74c24737c9/raw/surge.list, update-interval=0, no-alert=0, hidden=0
+𝐏𝐫𝐨𝐱𝐲 = select, 𝐀𝐮𝐭𝐨, 𝐒𝐞𝐥𝐞𝐜𝐭, 𝐅𝐚𝐥𝐥𝐛𝐚𝐜𝐤, 𝐑𝐨𝐮𝐧𝐝𝐑𝐨𝐛𝐢𝐧, 𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐥𝐢𝐧𝐞, 𝐃𝐥𝐞𝐫 𝐂𝐥𝐨𝐮𝐝, no-alert=0, hidden=0
+𝐀𝐮𝐭𝐨 = url-test, url=http://www.gstatic.com/generate_204, update-interval=0, timeout=0, interval=600, tolerance=50, policy-path=https://sub.store/download/collection/Grain-is, no-alert=0, hidden=0
+𝐒𝐞𝐥𝐞𝐜𝐭 = select, update-interval=0, policy-path=https://sub.store/download/collection/Grain-is, no-alert=0, hidden=0
+𝐅𝐚𝐥𝐥𝐛𝐚𝐜𝐤 = fallback, policy-path=订阅地址, url=http://www.gstatic.com/generate_204, interval=600, tolerance=50
+𝐑𝐨𝐮𝐧𝐝𝐑𝐨𝐛𝐢𝐧 = load-balance, persistent=1, policy-path=订阅地址, update-interval=0
+𝐀𝐬𝐢𝐚𝐧𝐌𝐞𝐝𝐢𝐚 = select, 𝐃𝐢𝐫𝐞𝐜𝐭, 🇭🇰 𝐇𝐊, 🇨🇳 𝐓𝐖, no-alert=0, hidden=0
+𝐍𝐞𝐭𝐞𝐚𝐬𝐞 𝐦𝐮𝐬𝐢𝐜 = select, 𝐜𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭, 𝐃𝐢𝐫𝐞𝐜𝐭, no-alert=0, hidden=0
+𝐍𝐞𝐭𝐟𝐥𝐢𝐱 = select, 𝐒𝐞𝐥𝐞𝐜𝐭, 𝐃𝐢𝐫𝐞𝐜𝐭
+𝐓𝐢𝐤𝐓𝐨𝐤 = select, 𝐒𝐞𝐥𝐞𝐜𝐭
+𝐂𝐥𝐮𝐛𝐡𝐨𝐮𝐬𝐞 = select, 🇺🇸 𝐔𝐒
+𝐘𝐨𝐮𝐓𝐮𝐛𝐞 = select, 𝐏𝐫𝐨𝐱𝐲, 𝐀𝐮𝐭𝐨, 𝐒𝐞𝐥𝐞𝐜𝐭, 𝐃𝐢𝐫𝐞𝐜𝐭, no-alert=0, hidden=0
+𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 = select, 𝐏𝐫𝐨𝐱𝐲, 𝐀𝐮𝐭𝐨, 𝐒𝐞𝐥𝐞𝐜𝐭, 𝐃𝐢𝐫𝐞𝐜𝐭, no-alert=0, hidden=0
+𝐓𝐰𝐢𝐭𝐭𝐞𝐫 = select, 𝐏𝐫𝐨𝐱𝐲, 𝐀𝐮𝐭𝐨, 𝐒𝐞𝐥𝐞𝐜𝐭, 𝐃𝐢𝐫𝐞𝐜𝐭, no-alert=0, hidden=0
+𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦 = select, 𝐏𝐫𝐨𝐱𝐲, 𝐀𝐮𝐭𝐨, 𝐒𝐞𝐥𝐞𝐜𝐭, 𝐃𝐢𝐫𝐞𝐜𝐭, no-alert=0, hidden=0
+𝐒𝐩𝐞𝐞𝐝𝐓𝐞𝐬𝐭 = select, 𝐒𝐞𝐥𝐞𝐜𝐭, 𝐃𝐢𝐫𝐞𝐜𝐭
+𝐀𝐩𝐩𝐥𝐞服务 = select, 𝐏𝐫𝐨𝐱𝐲, 𝐃𝐢𝐫𝐞𝐜𝐭, no-alert=0, hidden=0
+𝐅𝐢𝐧𝐚𝐥 = select, 𝐏𝐫𝐨𝐱𝐲, 𝐃𝐢𝐫𝐞𝐜𝐭, no-alert=0, hidden=0
+𝐜𝐨𝐩𝐲𝐫𝐢𝐠𝐡𝐭 = select, policy-path=https://sub.store/download/UnblockNeteaseMusic, update-interval=0, no-alert=0, hidden=0
+𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐥𝐢𝐧𝐞 = url-test, update-interval=0, policy-regex-filter=IPLC|iplc|IEPL|iepl, no-alert=0, hidden=0, policy-path=https://sub.store/download/collection/Grain-is
+🇭🇰 𝐇𝐊 = url-test, url=http://www.gstatic.com/generate_204, policy-path=https://sub.store/download/collection/Grain-is, update-interval=0, policy-regex-filter=HK|香港, timeout=0, interval=0, tolerance=0, no-alert=0, hidden=0
+🇨🇳 𝐓𝐖 = url-test, url=http://www.gstatic.com/generate_204, policy-path=https://sub.store/download/collection/Grain-is, update-interval=0, policy-regex-filter=TW|台湾, timeout=0, interval=0, tolerance=0, no-alert=0, hidden=0
+🇸🇬 𝐒𝐆 = url-test, url=http://www.gstatic.com/generate_204, policy-path=https://sub.store/download/collection/Grain-is, update-interval=0, policy-regex-filter=SG|新加坡, timeout=0, interval=0, tolerance=0, no-alert=0, hidden=0
+🇯🇵 𝐉𝐏 = url-test, url=http://www.gstatic.com/generate_204, policy-path=https://sub.store/download/collection/Grain-is, update-interval=0, policy-regex-filter=JP|日本, timeout=0, interval=0, tolerance=0, no-alert=0, hidden=0
+🇺🇸 𝐔𝐒 = url-test, url=http://www.gstatic.com/generate_204, policy-path=https://sub.store/download/collection/Grain-is, update-interval=0, policy-regex-filter=US|美国, timeout=0, interval=0, tolerance=0, no-alert=0, hidden=0
+
+[Rule]
+# > Proxy
+PROCESS-NAME,v2ray,𝐃𝐢𝐫𝐞𝐜𝐭
+PROCESS-NAME,ss-local,𝐃𝐢𝐫𝐞𝐜𝐭
+PROCESS-NAME,UUBooster,𝐃𝐢𝐫𝐞𝐜𝐭
+# > Download
+PROCESS-NAME,aria2c,𝐃𝐢𝐫𝐞𝐜𝐭
+PROCESS-NAME,fdm,𝐃𝐢𝐫𝐞𝐜𝐭
+PROCESS-NAME,Folx,𝐃𝐢𝐫𝐞𝐜𝐭
+PROCESS-NAME,NetTransport,𝐃𝐢𝐫𝐞𝐜𝐭
+PROCESS-NAME,Thunder,𝐃𝐢𝐫𝐞𝐜𝐭
+PROCESS-NAME,Transmission,𝐃𝐢𝐫𝐞𝐜𝐭
+PROCESS-NAME,uTorrent,𝐃𝐢𝐫𝐞𝐜𝐭
+PROCESS-NAME,WebTorrent,𝐃𝐢𝐫𝐞𝐜𝐭
+PROCESS-NAME,WebTorrent Helper,𝐃𝐢𝐫𝐞𝐜𝐭
+# > BlockOTA（屏蔽系统版本更新）
+DOMAIN,gdmf.apple.com,𝐑𝐞𝐣𝐞𝐜𝐭
+DOMAIN,gdmf.apple.com.akadns.net,𝐑𝐞𝐣𝐞𝐜𝐭
+DOMAIN,mesu.apple.com,𝐑𝐞𝐣𝐞𝐜𝐭
+DOMAIN,mesu-cdn.apple.com.akadns.net,𝐑𝐞𝐣𝐞𝐜𝐭
+DOMAIN,mesu-cdn.origin-apple.com.akadns.net,𝐑𝐞𝐣𝐞𝐜𝐭
+DOMAIN,mesu.g.aaplimg.com,𝐑𝐞𝐣𝐞𝐜𝐭
+DOMAIN,appldnld.apple.com,𝐑𝐞𝐣𝐞𝐜𝐭
+DOMAIN,appldnld.apple.com.akadns.net,𝐑𝐞𝐣𝐞𝐜𝐭
+# Rulesets (by eHpo1 + DivineEngine）
+# 后续规则修正
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list,𝐃𝐢𝐫𝐞𝐜𝐭,update-interval=3600
+# 广告拦截
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Advertising.list,𝐑𝐞𝐣𝐞𝐜𝐭,update-interval=3600
+# 隐私保护
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Privacy.list,𝐑𝐞𝐣𝐞𝐜𝐭,update-interval=3600
+# 运营商劫持或恶意网站
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Hijacking.list,𝐑𝐞𝐣𝐞𝐜𝐭,update-interval=3600
+# > AsianMedia
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BiliBili/BiliBili.list,𝐀𝐬𝐢𝐚𝐧𝐌𝐞𝐝𝐢𝐚
+# Netflix
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Media/Netflix.list,𝐍𝐞𝐭𝐟𝐥𝐢𝐱
+# YouTube
+RULE-SET,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/YouTube.list,𝐘𝐨𝐮𝐓𝐮𝐛𝐞
+# >Unlock NeteaseMusic
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/NetEaseMusic/NetEaseMusic.list,𝐍𝐞𝐭𝐞𝐚𝐬𝐞 𝐦𝐮𝐬𝐢𝐜
+# Telegram
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list,𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦
+# Twitter
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list,𝐓𝐰𝐢𝐭𝐭𝐞𝐫
+# TikTok
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TikTok/TikTok.list,𝐓𝐢𝐤𝐓𝐨𝐤
+# Instagram
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Instagram/Instagram.list,𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦
+# Clubhouse
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Clubhouse/Clubhouse.list,𝐂𝐥𝐮𝐛𝐡𝐨𝐮𝐬𝐞
+# Speedtest
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Speedtest.list,𝐒𝐩𝐞𝐞𝐝𝐓𝐞𝐬𝐭,update-interval=3600
+# 国际流媒体服务
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list,𝐒𝐞𝐥𝐞𝐜𝐭,update-interval=3600
+# 中国流媒体服务（面向海外版本）
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list,𝐑𝐞𝐣𝐞𝐜𝐭,update-interval=3600
+# Apple 服务
+RULE-SET,https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Surge/Surge%203/Provider/Apple.list,𝐀𝐩𝐩𝐥𝐞服务,update-interval=3600
+# TestFlight
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Apple/TestFlight.list,𝐀𝐩𝐩𝐥𝐞服务,update-interval=3600
+# 全球加速
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Global.list,𝐒𝐞𝐥𝐞𝐜𝐭,update-interval=3600
+# 中国直连
+RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/China.list,𝐃𝐢𝐫𝐞𝐜𝐭,update-interval=3600
+# 局域网
+RULE-SET,LAN,𝐃𝐢𝐫𝐞𝐜𝐭
+# GeoIP China
+GEOIP,CN,𝐃𝐢𝐫𝐞𝐜𝐭
+FINAL,𝐅𝐢𝐧𝐚𝐥,dns-failed
+
+[Host]
+# Firebase Cloud Messaging
+mtalk.google.com = 108.177.125.188
+
+[URL Rewrite]
+# 如果你解锁了「模块」功能可以使用 sgmodule 后清空 [URL Rewrite] 及 [MITM] 部分，MitM 证书重新生成配置。
+# 建议必选使用 General.sgmodule，其他 .sgmodule 按需加入
+
+[Header Rewrite]
+# 据粗略统计，有大概三分之二的本项目使用者停留在了 Surge 2、3 时期故而保留了 Rewrite 及 MitM，所以如果你解锁了「模块」功能可以使用 sgmodule 后清空 [URL Rewrite] 及 [MITM] 部分，MitM 证书重新生成配置。
+# 建议必选使用 General.sgmodule，其他 .sgmodule 按需加入
+
+[MITM]
+skip-server-cert-verify = true
+hostname = api.abema.io, ios.prod.ftl.netflix.com, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, -*.weibo.com, api.m.jd.com, trade-acs.m.taobao.com, jdjoy.jd.com, mp.weixin.qq.com, pan.baidu.com, vip1.kuwo.cn, weixin110.qq.com, testflight.apple.com, *.baidu.com
+ca-passphrase = UNCLEWANG
+ca-p12 = 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
+
+[Script]
+# > TestFlight
+// TestFlight = type=cron,cronexp=0 */6 * * *,script-path=https://raw.githubusercontent.com/songyangzz/QuantumultX/master/testflight.js,script-update-interval=0
+# > Sub-Store 自动同步
+Sub-Store 自动同步 = type=cron,cronexp=0 0 * * *,script-path=https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/scripts/cron-sync-artifacts.js
+# > 机场流量信息策略组版
+Sub_info = type=http-request,pattern=http://sub\.info,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info.js
+# > 机场流量
+// 机场流量 = type=cron,cronexp=0 6 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/flow.js
+# > 机场签到
+机场签到 = type=cron,cronexp=1 6 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkin_env.js
+# > 机场签到Cookie
+// 机场签到Cookie版 = type=cron,cronexp=2 6 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkincookie_env.js
+# > 爱奇艺
+# > 专享服务或专享特权
+// 爱奇艺签到 = type=cron,cronexp=4 6 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+# > 京东
+// 京东多合一签到 = type=cron,cronexp="5,6 0 * * *",wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+# > 取关京东店铺商品
+// 取关京东店铺商品 = type=cron,cronexp=55 23 * * *,wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_unsubscribe.js
+# > 京东超市
+// 东东超市 = type=cron,cronexp=11 0-18 * * *,wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_superMarket.js,script-update-interval=0
+# > 京东超市兑换
+// 东东超市兑换奖品 = type=cron,cronexp="58,59,0,1,2 59,0 23,0 * * *",wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_blueCoin.js
+# > 东东农场
+// 东东农场 = type=cron,cronexp=5 0-18/6 * * *,wake-system=1,timeout=3600,script-path=https://jdsharedresourcescdn.azureedge.net/jdresource/jd_fruit.js,script-update-interval=0
