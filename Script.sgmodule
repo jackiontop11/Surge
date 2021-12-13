@@ -3,6 +3,7 @@
 #!system=ios
 
 [Rule]
+# > 哔哩哔哩去广告
 URL-REGEX,https://app.bilibili.com/x/v2/(splash|search/(defaultword|square)),REJECT
 URL-REGEX,https://api.bilibili.com/x/v2/dm/ad,REJECT
 
