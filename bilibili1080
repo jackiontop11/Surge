@@ -1,0 +1,10 @@
+#!name=bilibili
+#!desc=1080P
+#!system=ios
+
+[Script]
+> 哔哩哔哩番剧默认开启1080P+
+http-response https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Script/Bilibili/BiliHD.js, tag=Bilipj
+
+[MITM]
+hostname = %APPEND% api.bilibili.com
