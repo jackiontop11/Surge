@@ -35,7 +35,8 @@ BiliBili_标签页处理 = type=http-response,requires-body=1,max-size=0,pattern
 http-response ^https://app\.bilibili\.com/bilibili\.app\.dynamic\.v2\.Dynamic/DynAll$ requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_dynamic.js
 
 // 播放器广告
-http-response ^https://app\.bilibili\.com/bilibili\.app\.view\.v1\.View/View$ requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/yjqiang/surge_scripts/main/scripts/bilibili/bilibili_view.js
+
+BiliBili_标签页处理 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.bilibili\.com\/pgc\/page\/cinema\/tab\? url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/bilibili_diy.js
 
 [MITM]
-hostname = %APPEND% app.biliintl.com, app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, api.bilibili.com, manga.bilibili.com
+hostname = %APPEND% i0.hdslb.com, app.biliintl.com, app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, api.bilibili.com, manga.bilibili.com, grpc.biliapi.net
