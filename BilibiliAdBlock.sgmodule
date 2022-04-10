@@ -32,7 +32,7 @@ BiliBili_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern
 BiliBili_标签页处理 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/bilibili_diy.js
 
 # ～ BiliBili_嗶哩嗶哩_觀影頁面去廣告@ddgksf2013
-BiliBili_推荐去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.bilibili\.com\/pgc\/page\/cinema\/tab\? ,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/bilibili_diy.js
+BiliBili_推荐去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.bilibili\.com\/pgc\/page\/cinema\/tab\?,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/bilibili_diy.js
 
 [MITM]
 hostname = %APPEND% app.biliintl.com, app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, api.bilibili.com, manga.bilibili.com
